@@ -36,5 +36,8 @@
     <ClCompile Include="风暴七号.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="风暴八号.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
