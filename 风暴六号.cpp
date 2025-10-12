@@ -20,6 +20,6 @@ int main() {
 		std::cout << dividend << " / " << divisor << " = " << quotient << '\n';
 	}
 	std::cout << 'A' << '\101' << '\x41' << (char)65 << '\n';
-    system("pause");
+	system("pause");
 	return 0;
 }

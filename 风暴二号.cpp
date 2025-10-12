@@ -27,7 +27,7 @@ int main() {
 	}
 	int i;
     for (i= 0; i< 10; i++) {
-		std::cout << i ;
+		std::cout << i << '\t';
     }
 	std::cout << '\n';
 	char ch;
