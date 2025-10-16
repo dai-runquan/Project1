@@ -1,6 +1,25 @@
 #include<iostream>
+#include"swap.h"
+static int add(int x, int y) {
+	int z = x + y;
+    return z;
+}
+//void swap(int x, int y) {
+	/*std::cout << "交换前：x=" << x << ", y=" << y << '\n';
+	int temp = x;
+	x = y;
+	y = temp;
+	std::cout << "交换后：x=" << x << ", y=" << y << '\n';
+}*/
 int main() {
-	int score;
+	int a = 10;
+	int b = 20;
+	int c = add(a, b);
+	std::cout << "a + b = " << c << '\n';
+	std::cout << "a = " << a << ", b = " << b << '\n';
+	swap(a, b);
+	std::cout << "a = " << a << ", b = " << b << '\n';
+    /*int score;
 	std::cout << "请输入一个整数分数：\n";
 	std::cin >> score;
 	std::cout << "您输入的分数是：" << score << '\n';
@@ -35,7 +54,7 @@ int main() {
 	double f;
 	for (j = 0, ch = 'A', f = 1.0; j < 101; j++, ch++, f = f + 0.1) {
 		std::cout << j << '\t' << ch << '\t' << f << '\n';
-	}
+	}*/
 	system("pause");
 	return 0;
 }
