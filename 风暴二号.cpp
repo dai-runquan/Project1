@@ -11,6 +11,22 @@ static int add(int x, int y) {
 	y = temp;
 	std::cout << "交换后：x=" << x << ", y=" << y << '\n';
 }*/
+static int daoxu(int n) {
+	int rev = 0;
+	while (n != 0) {
+		rev = rev * 10 + n % 10;
+		n = n / 10;
+	}
+	return rev;
+}
+static int xinzhengshu(int n) {
+	int a = 0;
+	while (n != 0) {
+		a = a * 10 + (n % 100)/10;
+		n = n / 100;
+	}
+	return a;
+}
 int main() {
 	int a = 10;
 	int b = 20;
@@ -19,6 +35,14 @@ int main() {
 	std::cout << "a = " << a << ", b = " << b << '\n';
 	swap(a, b);
 	std::cout << "a = " << a << ", b = " << b << '\n';
+	std::cout << "请输入一个三位整数：" << '\n';
+	int n;
+	std::cin >> n;
+	std::cout << "反转后的数字为：" << daoxu(n) << '\n';
+	int m;
+	std::cout << "请输入一个正整数：" << '\n';
+	std::cin >> m;
+	std::cout << "新整数为：" << xinzhengshu(m) << '\n';
     /*int score;
 	std::cout << "请输入一个整数分数：\n";
 	std::cin >> score;

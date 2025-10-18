@@ -13,6 +13,22 @@ static int test04(int a) {
 	std::cout << "test04函数被调用，参数a的值为：" << a << '\n';
 	return a;
 }
+static int jiechenghe(int n) {
+	if (n < 1) {
+		std::cerr << "Invalid input: n must be >= 1" << std::endl;
+		return 0;
+	}
+	if (n == 1) {
+		return 1;
+	}
+	else {
+		int fact = 1;
+		for (int i = 1; i <= n; i++) {
+			fact *= i;
+		}
+		return fact + jiechenghe(n - 1);
+	}
+}
 int main() {
 	test01();
 	test02(100);
@@ -20,6 +36,7 @@ int main() {
 	std::cout << "test03函数的返回值为：" << ret << '\n';
 	int ret2 = test04(200);
 	std::cout << "test04函数的返回值为：" << ret2 << '\n';
+	std::cout << "计算1! + 2! + 3! + ... + 10!的和为：" << jiechenghe(10) << '\n';
 	/*int a = 10;
 	int b = 20;
 	int c = 0;

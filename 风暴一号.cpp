@@ -4,9 +4,7 @@
 #include <limits>                  // 引入数值极限库，用于获取 int 类型的最小值
 #include <stdexcept>              // 引入异常处理库，用于抛出和捕获异常
 #include <string>                 // 引入字符串库，用于字符串操作
-
-// 输入合法正整数
-int inputPositiveInt(const std::string& prompt) {
+static int inputPositiveInt(const std::string& prompt) {
     int value;
     while (true) {
         std::cout << prompt;
@@ -18,17 +16,13 @@ int inputPositiveInt(const std::string& prompt) {
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 }
-
-// 查找数组最大值，空数组抛出异常
-int findMax(const std::vector<int>& a) {
+static int findMax(const std::vector<int>& a) {
     if (a.empty()) {               // 判断数组是否为空
         throw std::invalid_argument("Array is empty."); // 空数组时抛出异常
     }
     return *std::max_element(a.begin(), a.end()); // 返回数组中的最大值
 }
-
-// 输入正整数序列
-std::vector<int> inputIntegers(int n) {
+static std::vector<int> inputIntegers(int n) {
     std::vector<int> a;           // 定义整数向量 a，用于存储用户输入的整数
     for (int i = 0; i < n; ++i) { // 循环 n 次，输入每个正整数
         a.push_back(inputPositiveInt("请输入第 " + std::to_string(i + 1) + " 个正整数：")); // 提示用户输入第 i+1 个正整数

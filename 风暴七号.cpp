@@ -1,9 +1,17 @@
 #include <iostream>  // 包含输入输出流头文件
 #include <string>    // 包含字符串处理头文件
+int feibolaqie(int n) {
+	if (n == 1 or n == 2) {
+		return 1;
+	}
+	else {
+		return feibolaqie(n - 1) + feibolaqie(n - 2);
+	}											
+}
 static int max(int a, int b, int c);// 定义max函数，返回两个整数中的较大值
 int main() {  // 主函数入口
 	int x, y, z; // 声明两个整型变量x和y
-	std::cout << "请输入两个整数，以空格分隔：\n";  // 输出提示信息
+	std::cout << "请输入三个整数，以空格分隔：\n";  // 输出提示信息
 	std::cin >> x >> y >> z;  // 从标准输入读取两个整数
 	std::cout << "较大值为：" << max(x, y, z) << '\n'; // 调用max函数并输出结果
  //   std::cout << -7 / -6 << '\n';
@@ -40,7 +48,11 @@ int main() {  // 主函数入口
 	//else {
 	//	std::cout << year << "不是闰年\n";  // 输出非闰年信息
  //   }
-    system("pause");  // 暂停程序，等待用户按键
+	int n = 0; 
+	std::cout << "请输入一个正整数n，计算斐波那契数列的第n项：\n";
+	std::cin >> n;
+	std::cout << "斐波那契数列第n项为：" << feibolaqie(n) << '\n'; 
+	system("pause");  // 暂停程序，等待用户按键
     return 0;
 } // 返回0，表示程序正常结束
 static int max(int a, int b, int c) {  // 定义max函数，返回两个整数中的较大值
